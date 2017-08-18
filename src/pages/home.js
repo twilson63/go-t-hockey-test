@@ -1,29 +1,20 @@
 import React from 'react'
-import Header from '../containers/header'
-import Logo from '../containers/logo'
-import BigButton from '../components/big-button'
+import { Button } from 'jrs-react-components'
+import { Link } from 'react-router-dom'
 
-const Home = function() {
+const Home = () => {
   return (
     <div>
-      <Header />
-      <main>
-        <Logo />
-        <div className="mt5 tc">
-          <BigButton onClick={openDocs}>Get Started</BigButton>
-        </div>
-      </main>
+      <div className="tc pa4">
+        <h1> WELCOME </h1>
+      </div>
+      <div className="tc pa4">
+        <Link to="/login">
+          <Button>Login</Button>
+        </Link>
+      </div>
     </div>
   )
 }
 
 export default Home
-
-function openDocs(e) {
-  if (/localhost/.test(window.location.href)) {
-    window.location = 'http://localhost:5000'
-  } else {
-    window.location =
-      'https://github.com/jrs-innovation-center/jrscode-react-starter#jrs-react-starter-kit'
-  }
-}

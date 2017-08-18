@@ -1,0 +1,1 @@
+export const SET_STICK_DATA = 'SET_STICK_DATA'
