@@ -30,7 +30,7 @@ let mws = require('./mws')
 //   )
 // }
 
-export const stickData = (dispatch, getState) => {
+export const stickData = mws => (dispatch, getState) => {
   mws()
     .then(res => res.json())
     .then(data => dispatch({ type: SET_STICK_DATA, payload: data }))
