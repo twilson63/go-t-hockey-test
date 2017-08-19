@@ -40,3 +40,15 @@ module.exports = () => {
     })
   })
 }
+
+// module.exports = () => {
+//   return new Promise(function(resolve, reject) {
+//     mws.request(listInventory, (err, result) => {
+//       if (err) {
+//         return reject(err)
+//       }
+//       //console.log(JSON.stringify(result))
+//       resolve(result)
+//     })
+//   })
+// }

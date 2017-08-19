@@ -6,7 +6,6 @@ import { stickData } from '../get-stick-data'
 
 class ViewInventory extends React.Component {
   componentDidMount() {
-    console.log(stickData)
     this.props.dispatch(stickData)
     console.log(this.props)
   }
